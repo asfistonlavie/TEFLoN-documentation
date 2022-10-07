@@ -38,6 +38,7 @@ Getting started
    :maxdepth: 1
 
    executing/cluster.rst
+   executing/bigmem.rst
 
 .. toctree::
    :caption: Project Info

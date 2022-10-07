@@ -43,7 +43,7 @@
               <p class="caption" role="heading"><span class="caption-text">Getting started</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#python">Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#python-3">Python 3</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#burrows-wheeler-alignment-tool">Burrows-Wheeler Alignment Tool</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#samtools">Samtools</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#repeatmasker">RepeatMasker</a></li>
@@ -59,6 +59,7 @@
 <p class="caption" role="heading"><span class="caption-text">Executing</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../executing/cluster.html">Cluster Execution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../executing/bigmem.html">Bigmem Execution</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Project Info</span></p>
 <ul>
@@ -91,21 +92,45 @@
              
   <section id="installation">
 <h1>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h1>
-<p>Before you can use TEFLoN2 , you will need to install its dependencies</p>
-<section id="python">
-<h2>Python<a class="headerlink" href="#python" title="Permalink to this heading"></a></h2>
+<p>Before you can use TEFLoN2 , you will need to install its dependencies.
+TEFLoN2 uses Python 3, BWA (Burrows-Wheeler Alignment Tool), Samtools, RepeatMasker and SnakeMake.</p>
+<section id="python-3">
+<h2>Python 3<a class="headerlink" href="#python-3" title="Permalink to this heading"></a></h2>
+<p>To check the version of your python :</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python --version
+</pre></div>
+</div>
+<p>If &lt; python 3, install python 3 on <a class="reference external" href="https://www.python.org/doc/">their site</a> or your console:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>sudo apt update
+<span class="gp">$ </span>sudo apt install python3
+</pre></div>
+</div>
+<p>If all went well you now have python 3 on your computer.</p>
 </section>
 <section id="burrows-wheeler-alignment-tool">
 <h2>Burrows-Wheeler Alignment Tool<a class="headerlink" href="#burrows-wheeler-alignment-tool" title="Permalink to this heading"></a></h2>
+<p>If your computer has bwa installed, check the version of your bwa :</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>bwa
+</pre></div>
+</div>
 </section>
 <section id="samtools">
 <h2>Samtools<a class="headerlink" href="#samtools" title="Permalink to this heading"></a></h2>
+<p>If your computer has samtools installed, check the version of your Samtools :</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>samtools --version
+</pre></div>
+</div>
+<p>If</p>
 </section>
 <section id="repeatmasker">
 <h2>RepeatMasker<a class="headerlink" href="#repeatmasker" title="Permalink to this heading"></a></h2>
 </section>
 <section id="snakemake">
 <h2>SnakeMake<a class="headerlink" href="#snakemake" title="Permalink to this heading"></a></h2>
+<p>If your computer has SnakeMake installed, check the version of your SnakeMake :</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>snakemake --version
+</pre></div>
+</div>
 </section>
 </section>
 
