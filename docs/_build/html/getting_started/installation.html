@@ -21,7 +21,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Data preparation" href="../operations/data_preparation.html" />
+    <link rel="next" title="TEFLoN2 Tutorial" href="teflon2_tutorial.html" />
     <link rel="prev" title="Welcome to TEFLoN2’s documentation!" href="../index.html" /> 
 </head>
 
@@ -43,23 +43,32 @@
               <p class="caption" role="heading"><span class="caption-text">Getting started</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#python-3">Python 3</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#burrows-wheeler-alignment-tool">Burrows-Wheeler Alignment Tool</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#samtools">Samtools</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#repeatmasker">RepeatMasker</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#snakemake">SnakeMake</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#teflon2">TEFLoN2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dependencies">Dependencies</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#installation-via-conda">Installation via Conda</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation-manually">Installation manually</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#python-3">Python 3</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#burrows-wheeler-alignment-tool-bwa">Burrows-Wheeler Alignment Tool (BWA)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1">SAMtools</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">RepeatMasker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">SnakeMake</a></li>
 </ul>
 </li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Operations</span></p>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="teflon2_tutorial.html">TEFLoN2 Tutorial</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Basic concepts</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../operations/data_preparation.html">Data preparation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../operations/steps_of_TEFLoN.html">Steps of TEFLoN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic_concepts/steps_of_TEFLoN.html">Steps of TEFLoN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic_concepts/output_file_summary.html">Output files summary</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Executing</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../executing/cluster.html">Cluster Execution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../executing/bigmem.html">Bigmem Execution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../executing/configure_parameter_file.html">Config parameter file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../executing/command_line_interface.html">Command line interface</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Project Info</span></p>
 <ul>
@@ -94,43 +103,74 @@
 <h1>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h1>
 <p>Before you can use TEFLoN2 , you will need to install its dependencies.
 TEFLoN2 uses Python 3, BWA (Burrows-Wheeler Alignment Tool), Samtools, RepeatMasker and SnakeMake.</p>
+<section id="teflon2">
+<h2>TEFLoN2<a class="headerlink" href="#teflon2" title="Permalink to this heading"></a></h2>
+<p>TEFLON2 is installed on <a class="reference external" href="https://github.com/asfistonlavie/TEFLoN2">Github repository</a> or your console:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>sudo apt update
+<span class="gp">$ </span>sudo apt install git
+<span class="gp">$ </span>git clone https://github.com/asfistonlavie/TEFLoN2.git
+</pre></div>
+</div>
+</section>
+<section id="dependencies">
+<h2>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.python.org">Python</a> ≥ 3</p></li>
+<li><p><a class="reference external" href="http://bio-bwa.sourceforge.net">BWA</a> ≥ 0.7.17</p></li>
+<li><p><a class="reference external" href="https://www.htslib.org">SAMtools</a> ≥ 1.15</p></li>
+<li><p><a class="reference external" href="https://www.repeatmasker.org/">RepeatMasker</a> ≥ 4.1.2</p></li>
+<li><p><a class="reference external" href="https://snakemake.readthedocs.io">Snakemake</a> ≥ 7.7.0</p></li>
+</ul>
+<section id="installation-via-conda">
+<h3>Installation via Conda<a class="headerlink" href="#installation-via-conda" title="Permalink to this heading"></a></h3>
+</section>
+<section id="installation-manually">
+<h3>Installation manually<a class="headerlink" href="#installation-manually" title="Permalink to this heading"></a></h3>
 <section id="python-3">
-<h2>Python 3<a class="headerlink" href="#python-3" title="Permalink to this heading"></a></h2>
+<h4>Python 3<a class="headerlink" href="#python-3" title="Permalink to this heading"></a></h4>
 <p>To check the version of your python :</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python --version
 </pre></div>
 </div>
-<p>If &lt; python 3, install python 3 on <a class="reference external" href="https://www.python.org/doc/">their site</a> or your console:</p>
+<p>If python &lt; 3, install python 3 on <a class="reference external" href="https://www.python.org/doc/">their site</a> or your console:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>sudo apt update
 <span class="gp">$ </span>sudo apt install python3
 </pre></div>
 </div>
 <p>If all went well you now have python 3 on your computer.</p>
 </section>
-<section id="burrows-wheeler-alignment-tool">
-<h2>Burrows-Wheeler Alignment Tool<a class="headerlink" href="#burrows-wheeler-alignment-tool" title="Permalink to this heading"></a></h2>
+<section id="burrows-wheeler-alignment-tool-bwa">
+<h4>Burrows-Wheeler Alignment Tool (BWA)<a class="headerlink" href="#burrows-wheeler-alignment-tool-bwa" title="Permalink to this heading"></a></h4>
 <p>If your computer has bwa installed, check the version of your bwa :</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>bwa
 </pre></div>
 </div>
+<p>If bwa is not installed or version &lt;  0.7.17 :</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>sudo apt update
+<span class="go">sudo apt -y install bwa</span>
+</pre></div>
+</div>
+<p>Recheck bwa version and if there are any problems, go to the <a class="reference external" href="https://bio-bwa.sourceforge.net/">bwa site</a></p>
 </section>
-<section id="samtools">
-<h2>Samtools<a class="headerlink" href="#samtools" title="Permalink to this heading"></a></h2>
-<p>If your computer has samtools installed, check the version of your Samtools :</p>
+<section id="id1">
+<h4>SAMtools<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h4>
+<p>If your computer has SAMtools installed, check the version of your SAMtools :</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>samtools --version
 </pre></div>
 </div>
-<p>If</p>
+<p>If samtools is not installed or SAMtools &lt; 1.15, follow installation instructions on <a class="reference external" href="http://www.htslib.org/">samtools site</a></p>
 </section>
-<section id="repeatmasker">
-<h2>RepeatMasker<a class="headerlink" href="#repeatmasker" title="Permalink to this heading"></a></h2>
+<section id="id2">
+<h4>RepeatMasker<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h4>
 </section>
-<section id="snakemake">
-<h2>SnakeMake<a class="headerlink" href="#snakemake" title="Permalink to this heading"></a></h2>
+<section id="id3">
+<h4>SnakeMake<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h4>
 <p>If your computer has SnakeMake installed, check the version of your SnakeMake :</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>snakemake --version
 </pre></div>
 </div>
+</section>
+</section>
 </section>
 </section>
 
@@ -139,7 +179,7 @@ TEFLoN2 uses Python 3, BWA (Burrows-Wheeler Alignment Tool), Samtools, RepeatMas
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../index.html" class="btn btn-neutral float-left" title="Welcome to TEFLoN2’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../operations/data_preparation.html" class="btn btn-neutral float-right" title="Data preparation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="teflon2_tutorial.html" class="btn btn-neutral float-right" title="TEFLoN2 Tutorial" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
