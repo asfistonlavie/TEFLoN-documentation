@@ -8,14 +8,15 @@ Welcome to TEFLoN2's documentation!
 
 TEFLoN2 is an improvement of `TEFLoN <https://github.com/jradrion/TEFLoN>`_. All improvements will allow it to be up to date, easier to use and more efficient.
 
-Like TEFLoN, TEFLoN2 uses paired-end illumina sequence data to both discover transposable elements (TEs) and perform TE genotyping.
+Like TEFLoN, TEFLoN2 uses paired-end illumina sequences to both discover and analyse individual transposable element (TE) insertions. While TEFLoN requires fashion input data (cf. figure 1.A) corresponding to the mapping of the reads on a reference and TE sequences.
 
-TEFLoN2 requires to prepare a specific mapping dataset (cf. figure 1.A). Then, one launches four individually automated scripts :
-It (cf. figure 1.B) detects all TE insertions (de novo and references TEs), then filter out low quality data to create a catalog of TE insertion, genotype them and finally estime their allele frequency.
+The first step allow detecting all TE insertions (cf. figure 1.B; de novo and references TE insertions). At the second step, the low quality data then filter out to create a catalog for all accurate TE insertions. The third step is the genotyping. The fourth and last step finally estimates the allele frequency for each individual TE insertions.
+
+NEWS:  TEFLoN2 requires now only one command line to launch four individually scripts in an automatic way. It can also now handle pool and individual samples for the TE frequency estimation. 
 
 .. image:: images/TEFLoN2_architecture.png
 
-TEFLoN2 can be run on high performance computers (bigmem), cluster or HPC cluste.
+TEFLoN2 can be run on high performance computers (bigmem) or clusters and for all kind of species.
 
 ---------------
 Getting started
